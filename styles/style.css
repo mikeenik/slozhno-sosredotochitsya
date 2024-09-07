@@ -366,7 +366,6 @@
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 768  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 @media (width < 768px) {
-
   .header {
     padding: 10px;
   }
@@ -428,7 +427,7 @@
   }
 
   .section__hard-to-concentrate-description-multitasking {
-    grid-row-start:  2;
+    grid-row-start: 2;
     grid-row-end: 3;
   }
 
@@ -454,21 +453,21 @@
   .section__reduced-concentration-multitasking {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start:  1;
+    grid-row-start: 1;
     grid-row-end: 2;
   }
 
   .section__reduced-concentration-food {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start:  2;
+    grid-row-start: 2;
     grid-row-end: 3;
   }
 
   .section__reduced-concentration-gadgets {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start:  3;
+    grid-row-start: 3;
     grid-row-end: 4;
   }
 
