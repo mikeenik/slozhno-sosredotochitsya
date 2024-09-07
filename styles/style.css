@@ -14,6 +14,7 @@
 .main {
   background-color: var(--color-bg);
   color: var(--color-text);
+  padding: 20px;
 }
 
 .main__title-h2 {
@@ -25,13 +26,22 @@
   background-color: var(--color-title-bg);
   color: var(--color-text-black);
   margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main__title-five-rec {
+  background-color: var(--color-title-bg);
+  color: var(--color-text-black);
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .main__title-bold {
   background-color: var(--color-title-bg);
   color: var(--color-text-black);
-  margin-bottom: 10px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Хедер ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
@@ -39,8 +49,8 @@
 .decorated-zone::after {
   position: absolute;
   content: "";
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 20px;
   width: 25px;
   height: 25px;
   border-right: 1px solid var(--color-title-bg);
@@ -49,8 +59,8 @@
 
 .decorated-zone::before {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 20px;
+  bottom: 20px;
   content: "";
   width: 25px;
   height: 25px;
@@ -61,8 +71,8 @@
 .header__rec {
   display: flex;
   position: absolute;
-  top: 5px;
-  right: 28px;
+  top: 25px;
+  right: 48px;
   text-transform: uppercase;
   color: var(--color-title-bg);
 }
@@ -83,7 +93,7 @@
   position: relative;
   display: grid;
   min-height: 768px;
-  margin-block-end: 20px;
+  padding: 20px;
 }
 
 .header__theme-menu {
@@ -123,6 +133,8 @@
 }
 
 .header__title {
+  margin-block-start: 200px;
+  margin-inline-start: -20px;
   font-size: var(--font-size-h1);
 }
 
@@ -132,10 +144,14 @@
 }
 
 .header__description-block {
+  margin-block-start: 55px;
+  margin-inline-end: 5px;
   justify-self: end;
 }
 
 .header__description {
+  font-size: 18px;
+  font-weight: 700;
   background-color: var(--color-title-bg);
   color: var(--color-text-black);
 }
@@ -144,8 +160,7 @@
 .section__hard-to-concentrate {
   display: grid;
   gap: var(--page-gap);
-  grid-template-columns: 334px auto;
-  padding-block-start: 60px;
+  grid-template-columns: fit-content(32%) fit-content(68%);
 }
 
 .section__hard-to-concentrate-title {
@@ -156,15 +171,20 @@
 .section__hard-to-concentrate-description {
   display: grid;
   grid-template-rows: repeat(2, 244px);
+  gap: var(--page-gap);
 }
 
 .section__hard-to-concentrate-description-multitasking {
+  font-size: 18px;
+  font-weight: 400;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
 .section__hard-to-concentrate-description-dopamine {
   grid-row-start: 2;
+  font-size: 18px;
+  font-weight: 400;
   grid-row-end: 3;
 }
 
@@ -172,8 +192,7 @@
 
 .section__reduced-concentration {
   display: grid;
-  gap: var(--page-gap);
-  grid-template-rows: auto 431px;
+  grid-template-rows: repeat(2, min-content);
   padding-block-start: 80px;
 }
 
@@ -184,202 +203,211 @@
 
 .section__reduced-concentration-description {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, fit-content(32%));
   grid-template-rows: auto;
+  gap: 20px;
 }
-
-.section__reduced-concentration-multitasking {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.section__reduced-concentration-food {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.section__reduced-concentration-gadgets {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "Как концентрироваться лучше, чем золотая рыбка"↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
-.section__gold-fish {
-  display: grid;
-  gap: var(--page-gap);
-  grid-template-columns: 334px auto;
-  padding-block-start: 80px;
-}
-
-.section__gold-fish-title {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-
-.section__gold-fish-description {
-  display: grid;
-  grid-template-rows: repeat(5, auto);
-  gap: var(--page-gap);
-}
-
-.section__gold-fish-sky {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.section__gold-fish-music {
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.section__gold-fish-walk {
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-
-.section__gold-fish-eat {
-  grid-row-start: 5;
-  grid-row-end: 6;
-}
-
-.section__gold-fish-read {
-  grid-row-start: 6;
-  grid-row-end: 7;
-}
-
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "А можно в картинках?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
-.fourth__section {
-  display: grid;
-  gap: var(--page-gap);
-  padding-block-start: 80px;
-  padding-block-end: 80px;
-}
-
-.images {
-  margin-top: 20px;
-  display: grid;
-  gap: var(--page-gap);
-  grid-template-columns: repeat(3, fit-content(33%));
-  grid-template-rows: repeat(3, fit-content(33%));
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.img__sunset {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.img__icecream {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.img__tape {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 4;
-}
-
-.img__books {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.img__street {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Подвал ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
-.footer {
-  min-height: 768px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.footer__title {
-  font-size: var(--font-size-h1);
-  line-height: 129.53px;
-}
-
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 1024  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
-@media (width < 1024px) {
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    align-items: end;
-    margin-top: 23.5%;
+  .section__reduced-concentration-multitasking {
+    font-size: 18px;
+  font-weight: 400;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
-  .header__title {
-    line-height: 99px;
-    font-size: 120px;
+  .section__reduced-concentration-food {
+    font-size: 18px;
+  font-weight: 400;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .section__reduced-concentration-gadgets {
+    font-size: 18px;
+  font-weight: 400;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "Как концентрироваться лучше, чем золотая рыбка"↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+  .section__gold-fish {
+    display: grid;
+    gap: var(--page-gap);
+    grid-template-columns: fit-content(32%) fit-content(68%);
+    padding-block-start: 80px;
+  }
+
+  .section__gold-fish-title {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .section__gold-fish-description {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    gap: 20px;
+  }
+
+  .section__gold-fish-sky {
+    font-size: 18px;
+  font-weight: 400;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .section__gold-fish-music {
+    font-size: 18px;
+  font-weight: 400;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .section__gold-fish-walk {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .section__gold-fish-eat {
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .section__gold-fish-read {
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+
+  /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "А можно в картинках?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+  .fourth__section {
+    display: grid;
+    padding-block-start: 80px;
+    padding-block-end: 60px;
+  }
+
+  .images {
+    display: grid;
+    gap: var(--page-gap);
+    grid-template-columns: repeat(3, fit-content(33%));
+    grid-template-rows: repeat(3, fit-content(33%));
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .img__sunset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .img__icecream {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .img__tape {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .img__books {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .img__street {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Подвал ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+  .footer {
+    min-height: 768px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--color-bg);
   }
 
   .footer__title {
-    line-height: 99px;
-    font-size: 120px;
+    font-size: var(--font-size-h1);
+    line-height: 129.53px;
   }
 
-  .header__description {
-    width: 364px;
-    font-size: 18px;
-    font-weight: 700;
+  /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 1024  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+  @media (width < 1024px) {
+    .header__theme-menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      align-items: end;
+      margin-top: 23.5%;
+    }
+
+    .header__title {
+      line-height: 99px;
+      font-size: 120px;
+    }
+
+    .footer__title {
+      line-height: 99px;
+      font-size: 120px;
+    }
+
+    .header__description {
+      width: 364px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .section__hard-to-concentrate {
+      display: grid;
+      gap: var(--page-gap);
+      grid-template-columns: 236px auto;
+    }
   }
 
-  .section__hard-to-concentrate {
-    display: grid;
-    gap: var(--page-gap);
-    grid-template-columns: 236px auto;
-  }
-}
+  /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 768  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 768  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+  @media (width < 768px) {
+    .header {
+      padding: 10px;
+    }
 
-@media (width < 768px) {
-  .header {
-    padding: 10px;
-  }
+    .header__theme-menu-title {
+      margin-block-start: 9.5vh;
+      margin-inline-start: -1%;
+    }
 
-  .header__theme-menu-title {
-    margin-block-start: 9.5vh;
-    margin-inline-start: -1%;
-  }
+    .header__theme-menu-list {
+      margin-block-start: 18%;
+      margin-inline-end: 6px;
+    }
 
-  .header__theme-menu-list {
-    margin-block-start: 18%;
-    margin-inline-end: 6px;
-  }
-
-  /* .header__rec {
+    /* .header__rec {
     display: flex;
     position: absolute;
     top: 5px;
@@ -388,139 +416,140 @@
     color: var(--color-title-bg);
   } */
 
-  .decorated-zone::after {
-    right: 10px;
-    top: 10px;
-  }
+    .decorated-zone::after {
+      right: 10px;
+      top: 10px;
+    }
 
-  .decorated-zone:before {
-    bottom: 10px;
-    left: 10px;
-  }
+    .decorated-zone:before {
+      bottom: 10px;
+      left: 10px;
+    }
 
-  .header__theme-menu-text {
-    inline-size: 100%;
-    margin-block-start: 8vh;
-    margin-block-end: 8.5vh;
-  }
+    .header__theme-menu-text {
+      inline-size: 100%;
+      margin-block-start: 8vh;
+      margin-block-end: 8.5vh;
+    }
 
-  .header__theme-menu-rec {
-    top: 11px;
-    right: 40px;
-  }
+    .header__theme-menu-rec {
+      top: 11px;
+      right: 40px;
+    }
 
-  .main {
-    gap: 50px;
-  }
+    .main {
+      gap: 50px;
+    }
 
-  .section__hard-to-concentrate {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-  }
+    .section__hard-to-concentrate {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+    }
 
-  .section__hard-to-concentrate-description {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-  }
+    .section__hard-to-concentrate-description {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+    }
 
-  .section__hard-to-concentrate-description-multitasking {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
+    .section__hard-to-concentrate-description-multitasking {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
 
-  .section__hard-to-concentrate-description-dopamine {
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
+    .section__hard-to-concentrate-description-dopamine {
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
 
-  .section__reduced-concentration {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: auto auto;
-  }
+    .section__reduced-concentration {
+      display: grid;
+      grid-template-columns: 1;
+      grid-template-rows: auto auto;
+    }
 
-  .section__reduced-concentration-description {
-    display: grid;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-  }
+    .section__reduced-concentration-description {
+      display: grid;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+    }
 
-  .section__reduced-concentration-multitasking {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
+    .section__reduced-concentration-multitasking {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
 
-  .section__reduced-concentration-food {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
+    .section__reduced-concentration-food {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
 
-  .section__reduced-concentration-gadgets {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
+    .section__reduced-concentration-gadgets {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
 
-  .width-limit {
-    inline-size: auto;
-  }
+    .width-limit {
+      inline-size: auto;
+    }
 
-  .section__gold-fish {
-    padding-inline: 10px;
-    grid-template-columns: fit-content(100%);
-    grid-template-rows: fit-content(32%) fit-content(68%);
-  }
+    .section__gold-fish {
+      padding-inline: 10px;
+      grid-template-columns: fit-content(100%);
+      grid-template-rows: fit-content(32%) fit-content(68%);
+    }
 
-  .fourth__section {
-    padding: 0 10px 40px;
-    gap: 10px;
-  }
+    .fourth__section {
+      padding: 0 10px 40px;
+      gap: 10px;
+    }
 
-  .images {
-    grid-template-columns: fit-content(100%);
-    grid-template-rows: repeat(auto-fit, fit-content(100%));
-    gap: 10px;
-  }
+    .images {
+      grid-template-columns: fit-content(100%);
+      grid-template-rows: repeat(auto-fit, fit-content(100%));
+      gap: 10px;
+    }
 
-  .img__sunset {
-    grid-column: auto;
-    grid-row: auto;
-  }
+    .img__sunset {
+      grid-column: auto;
+      grid-row: auto;
+    }
 
-  .img__icecream {
-    grid-column: auto;
-    grid-row: auto;
-  }
+    .img__icecream {
+      grid-column: auto;
+      grid-row: auto;
+    }
 
-  .img__tape {
-    grid-column: auto;
-    grid-row: auto;
-  }
+    .img__tape {
+      grid-column: auto;
+      grid-row: auto;
+    }
 
-  .img__books {
-    grid-column: auto;
-    grid-row: auto;
-  }
+    .img__books {
+      grid-column: auto;
+      grid-row: auto;
+    }
 
-  .img__street {
-    grid-column: auto;
-    grid-row: auto;
-  }
+    .img__street {
+      grid-column: auto;
+      grid-row: auto;
+    }
 
-  .footer {
-    padding: 10px;
-  }
+    .footer {
+      padding: 10px;
+    }
 
-  .footer__title {
-    margin-block: 36.5vh;
+    .footer__title {
+      margin-block: 36.5vh;
+    }
   }
 }
