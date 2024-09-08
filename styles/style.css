@@ -3,18 +3,14 @@
 .page {
   color: var(--color-text);
   font-family: var(--font-family);
-  background-image: var(--page-bg-img);
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
   line-height: 23.4px;
+  letter-spacing: -0.3px;
 }
 
 .main {
   background-color: var(--color-bg);
   color: var(--color-text);
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
 
 .main__title-h2 {
@@ -42,6 +38,8 @@
   background-color: var(--color-title-bg);
   color: var(--color-text-black);
   font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.3px;
 }
 
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Хедер ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
@@ -94,7 +92,10 @@
   display: grid;
   padding:  20px 20px 10px 20px;
   min-height: 768px;
-
+  background-image: var(--page-bg-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header__theme-menu {
@@ -134,8 +135,8 @@
 }
 
 .header__title {
-  margin-block-start: 20px;
-  margin-inline-start: -20px;
+  margin-block-start: 65px;
+  margin-inline-start: -25px;
   font-size: var(--font-size-h1);
   align-self: center;
 }
@@ -146,8 +147,6 @@
 }
 
 .header__description-block {
-  margin-block-start: 5px;
-  margin-inline-end: 5px;
   justify-self: end;
   align-self: center;
 }
@@ -157,6 +156,7 @@
   font-weight: 700;
   background-color: var(--color-title-bg);
   color: var(--color-text-black);
+  margin-block-end: 33px;
 }
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "Почему посредоточиться так сложно?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
@@ -164,7 +164,7 @@
   display: grid;
   gap: var(--page-gap);
   grid-template-columns: fit-content(32%) fit-content(68%);
-  padding-top: 50px;
+  padding-top: 45px;
 }
 
 .section__hard-to-concentrate-title {
@@ -175,7 +175,7 @@
 .section__hard-to-concentrate-description {
   display: grid;
   grid-template-rows: repeat(2, 244px);
-  gap: var(--page-gap);
+  gap: 20px;
 }
 
 .section__hard-to-concentrate-description-multitasking {
@@ -273,18 +273,25 @@
 }
 
 .section__gold-fish-walk {
+  font-size: 18px;
+  font-weight: 400;
   grid-row-start: 4;
   grid-row-end: 5;
 }
 
 .section__gold-fish-eat {
+  font-size: 18px;
+  font-weight: 400;
   grid-row-start: 5;
   grid-row-end: 6;
 }
 
 .section__gold-fish-read {
+  font-size: 18px;
+  font-weight: 400;
   grid-row-start: 6;
   grid-row-end: 7;
+  letter-spacing: 1rem;
 }
 
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "А можно в картинках?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
@@ -297,7 +304,8 @@
 
 .images {
   display: grid;
-  gap: var(--page-gap);
+  padding-top: 10px;
+  gap: 20px;
   grid-template-columns: repeat(3, fit-content(33%));
   grid-template-rows: repeat(3, fit-content(33%));
 }
