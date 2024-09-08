@@ -92,8 +92,9 @@
 .header {
   position: relative;
   display: grid;
-  padding: 20px;
+  padding:  20px 20px 10px 20px;
   min-height: 768px;
+
 }
 
 .header__theme-menu {
@@ -136,6 +137,7 @@
   margin-block-start: 20px;
   margin-inline-start: -20px;
   font-size: var(--font-size-h1);
+  align-self: center;
 }
 
 .title {
@@ -147,6 +149,7 @@
   margin-block-start: 5px;
   margin-inline-end: 5px;
   justify-self: end;
+  align-self: center;
 }
 
 .header__description {
@@ -161,6 +164,7 @@
   display: grid;
   gap: var(--page-gap);
   grid-template-columns: fit-content(32%) fit-content(68%);
+  padding-top: 50px;
 }
 
 .section__hard-to-concentrate-title {
