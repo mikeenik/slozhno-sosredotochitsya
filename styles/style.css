@@ -8,6 +8,7 @@
   font-family: var(--font-family);
   line-height: 23.4px;
   background-color: var(--color-bg);
+  background-attachment: fixed;
 }
 
 .main {
@@ -44,6 +45,23 @@
   letter-spacing: -0.3px;
 }
 
+.text-link {
+    text-shadow: 2px 2px 0 #FF0070;
+    text-decoration: none;
+  }
+  
+  .text-link:hover {
+    border-block-end: 1px solid #000028;
+  }
+  
+  .text-link:focus {
+    outline: none;
+  }
+  
+  .text-link:focus-visible {
+    outline: 1px solid #F1B2CE;
+  }
+  
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Хедер ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 .decorated-zone::after {
