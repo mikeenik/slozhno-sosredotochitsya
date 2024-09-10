@@ -64,6 +64,8 @@
 /*↓↓↓↓ Блок со стилями для хедера ↓↓↓↓*/
 .header {
   position: relative;
+  width: 100%;
+  height: 100%;
   display: grid;
   padding: 20px;
   background-image: var(--page-bg-img);
@@ -73,7 +75,6 @@
 }
 
 .decorated-zone:before {
-  position: absolute;
   content: "";
   width: 25px;
   height: 25px;
@@ -91,7 +92,7 @@
   height: 25px;
   border-block-start: 1px solid var(--border-color);
   border-inline-end: 1px solid var(--border-color);
-  position: absolute;
+
   right: 20px;
   top: 23px;
 }
@@ -349,6 +350,8 @@
 .footer {
   padding: 0 20px 20px 20px;
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -363,7 +366,6 @@
 
 /*↓↓↓↓ Блок со стилями для разрешений меньше 1024 ↓↓↓↓*/
 @media (width < 1024px) {
-
   .header__theme-menu-list {
     flex-direction: column;
     gap: 10px;
@@ -376,10 +378,10 @@
     margin-inline-start: -2.4%;
   }
 
-  .header__description {
+  /* .header__description {
+  } */
 
-  }
-  .section__hard-to-concentrate-description{
+  .section__hard-to-concentrate-description {
     gap: 20px;
   }
 
@@ -395,106 +397,106 @@
 
 /*↓↓↓↓ Блок со стилями для разрешений меньше 768 ↓↓↓↓*/
 @media (width < 768px) {
-    .header {
-      padding: 10px;
-    }
-  
-    .header__title {
-      margin-block-start: 9.5vh;
-      margin-inline-start: -1%;
-    }
-  
-    .header__theme-menu-list {
-      margin-block-start: 18%;
-      margin-inline-end: 6px;
-    }
-  
-    .decorated-zone::after {
-      right: 10px;
-      top: 10px;
-    }
-    
-    .decorated-zone:before {
-      bottom: 10px;
-      left: 10px;
-    }
-  
-    .header__description {
-      inline-size: 100%;
-      margin-block-start: 8vh;
-      margin-block-end: 8.5vh;
-    }
-  
-    .header__rec {
-      top: 11px;
-      right: 40px;
-    }
-    
-    .main-page {
-      gap: 50px;
-    }
-  
-    .section__hard-to-concentrate {
-      padding: 40px 10px 0;
-      grid-template-rows: fit-content(32%) fit-content(68%);
-      grid-template-columns: fit-content(100%);
-    }
-  
-    .section__reduced-concentration {
-      padding-inline: 10px;
-    }
-  
-    .width-limit {
-      inline-size: auto;
-    }
-  
-    .section__gold-fish {
-      padding-inline: 10px;
-      grid-template-columns: fit-content(100%);
-      grid-template-rows: fit-content(32%) fit-content(68%);
-    }
-  
-    .section__images {
-      padding: 0 10px 40px;
-      gap: 10px;
-    }
-  
-    .images {
-      grid-template-columns: fit-content(100%);
-      grid-template-rows: repeat(auto-fit, fit-content(100%));
-      gap: 10px;
-    }
-  
-    .img__sunset {
-      grid-column: auto;
-      grid-row: auto;
-    }
-    
-    .img__icecream {
-      grid-column: auto;
-      grid-row: auto;
-    }
-    
-    .img__tape {
-      grid-column: auto;
-      grid-row: auto;
-    }
-    
-    .img__books {
-      grid-column: auto;
-      grid-row: auto;
-    }
-    
-    .img__street {
-      grid-column: auto;
-      grid-row: auto;
-    }
-  
-    .footer {
-      padding: 10px;
-    }
-  
-    .footer__title {
-      margin-block: 36.5vh;
-    }
+  .header {
+    padding: 10px;
   }
+
+  .header__title {
+    margin-block-start: 9.5vh;
+    margin-inline-start: -1%;
+  }
+
+  .header__theme-menu-list {
+    margin-block-start: 18%;
+    margin-inline-end: 6px;
+  }
+
+  .decorated-zone::after {
+    right: 10px;
+    top: 10px;
+  }
+
+  .decorated-zone:before {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__description {
+    inline-size: 100%;
+    margin-block-start: 8vh;
+    margin-block-end: 8.5vh;
+  }
+
+  .header__rec {
+    top: 11px;
+    right: 40px;
+  }
+
+  .main-page {
+    gap: 50px;
+  }
+
+  .section__hard-to-concentrate {
+    padding: 40px 10px 0;
+    grid-template-rows: fit-content(32%) fit-content(68%);
+    grid-template-columns: fit-content(100%);
+  }
+
+  .section__reduced-concentration {
+    padding-inline: 10px;
+  }
+
+  .width-limit {
+    inline-size: auto;
+  }
+
+  .section__gold-fish {
+    padding-inline: 10px;
+    grid-template-columns: fit-content(100%);
+    grid-template-rows: fit-content(32%) fit-content(68%);
+  }
+
+  .section__images {
+    padding: 0 10px 40px;
+    gap: 10px;
+  }
+
+  .images {
+    grid-template-columns: fit-content(100%);
+    grid-template-rows: repeat(auto-fit, fit-content(100%));
+    gap: 10px;
+  }
+
+  .img__sunset {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .img__icecream {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .img__tape {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .img__books {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .img__street {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footer__title {
+    margin-block: 36.5vh;
+  }
+}
