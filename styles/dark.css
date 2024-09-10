@@ -5,12 +5,19 @@
 */
 
 .page.theme_dark {
+  --shadow-color: #ff0070;
+  --border-color: #ff0070;
+  --accent-color: #ffc2e6;
+  --title-color: #db00ff;
+  --decor-color: #000028;
+  --decor-bg-color: #ff0070;
+  --page-text-color: #f1b2ce;
+  --page-bg-color: #000028;
+  --link-shadow: #ff0070;
+  --hover-color: rgb(255, 0, 112, 0.4);
+  --text-font: "IBM Plex Mono", monospace;
+  --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --page-bg-img: url(../images/cover-image-dark.png);
-  --color-bg: rgba(0, 0, 40, 1);
-  --color-text: rgba(241, 178, 206, 1);
-  --color-text-shadow: rgba(255, 0, 112, 1);
-  --color-title-bg: rgba(255, 0, 112, 1);
-  --color-focus: rgba(219, 0, 255, 1);
-  --border-color: #FF0070;
-  --hover-color: rgb(255, 0, 112, 0.40);
+  --hidden-owerflow: visible;
+  --hidden-const: auto;
 }

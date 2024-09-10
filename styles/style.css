@@ -1,98 +1,110 @@
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Основные стили проекта ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
+/*↓↓↓↓ Блок со стилями для всей страницы ↓↓↓↓*/
 .page {
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   gap: 60px;
-  color: var(--color-text);
-  font-family: var(--font-family);
+  color: var(--border-color);
+  font-family: var(--text-font);
   line-height: 23.4px;
-  background-color: var(--color-bg);
+  background-color: var(--page-bg-color);
   background-attachment: fixed;
 }
 
 .main {
-  color: var(--color-text);
   padding: 0 20px 0 20px;
 }
 
-.main__title-h2 {
-  color: var(--color-title-bg);
-  font-size: var(--font-size-h2);
-}
-
-.main__title-h3 {
-  background-color: var(--color-title-bg);
-  color: var(--color-text-black);
-  margin-bottom: 10px;
+.main-title {
   font-size: 18px;
   font-weight: 700;
+  line-height: 1.3;
 }
 
-.main__title-five-rec {
-  background-color: var(--color-title-bg);
-  color: var(--color-text-black);
-  margin-bottom: 10px;
+.main-text {
   font-size: 18px;
   font-weight: 400;
-}
-
-.main__title-bold {
-  background-color: var(--color-title-bg);
-  color: var(--color-text-black);
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: -0.3px;
+  line-height: 1.3;
+  padding-top: 10px;
+  color: var(--page-text-color);
 }
 
 .text-link {
-    text-shadow: 2px 2px 0 #FF0070;
-    text-decoration: none;
-  }
-  
-  .text-link:hover {
-    border-block-end: 1px solid #000028;
-  }
-  
-  .text-link:focus {
-    outline: none;
-  }
-  
-  .text-link:focus-visible {
-    outline: 1px solid #F1B2CE;
-  }
-  
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Хедер ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+  text-shadow: 2px 2px 0 #ff0070;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  border-block-end: 1px solid #000028;
+}
+
+.text-link:focus {
+  outline: none;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid #f1b2ce;
+}
+
+.title-decor {
+  color: var(--decor-color);
+  background-color: var(--decor-bg-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.title-decor-h4 {
+  color: var(--decor-color);
+  background-color: var(--decor-bg-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/*↓↓↓↓ Блок со стилями для хедера ↓↓↓↓*/
+.header {
+  position: relative;
+  display: grid;
+  padding: 20px;
+  background-image: var(--page-bg-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.decorated-zone:before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-block-end: 1px solid var(--border-color);
+  border-inline-start: 1px solid var(--border-color);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
 
 .decorated-zone::after {
   position: absolute;
   content: "";
-  right: 20px;
-  top: 20px;
   width: 25px;
   height: 25px;
-  border-right: 1px solid var(--color-title-bg);
-  border-top: 1px solid var(--color-title-bg);
-}
-
-.decorated-zone::before {
+  border-block-start: 1px solid var(--border-color);
+  border-inline-end: 1px solid var(--border-color);
   position: absolute;
-  left: 20px;
-  bottom: 20px;
-  content: "";
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid var(--color-title-bg);
-  border-bottom: 1px solid var(--color-title-bg);
+  right: 20px;
+  top: 23px;
 }
 
 .header__rec {
   display: flex;
   position: absolute;
   top: 25px;
-  right: 48px;
+  right: 50px;
   text-transform: uppercase;
-  color: var(--color-title-bg);
+  inline-size: var(--hidden-const);
+  block-size: var(--hidden-const);
+  overflow: var(--hidden-owerflow);
 }
 
 .header__rec::after {
@@ -100,37 +112,24 @@
   width: 9px;
   height: 9px;
   position: absolute;
-  border-radius: 50%;
-  background-color: var(--color-title-bg);
   top: 5px;
   right: -19px;
-  box-shadow: 0 0 4px 2px var(--color-title-bg);
-}
-
-.header {
-  position: relative;
-  display: grid;
-  padding: 20px 20px 10px 20px;
-  min-height: 768px;
-  background-image: var(--page-bg-img);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  box-shadow: 0 0 4px 2px var(--border-color);
 }
 
 .header__theme-menu {
   font-size: 18px;
   font-weight: 400;
-  line-height: 18px;
 }
 
 .header__theme-menu-list {
   display: flex;
-  gap: calc(var(--page-gap) / 2);
+  gap: 15px;
   justify-content: center;
   align-items: center;
   list-style: none;
-  color: var(--color-title-bg);
 }
 
 .header__theme-menu-button {
@@ -147,42 +146,40 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:active {
   border: 1px solid currentColor;
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
 .header__title {
-  margin-block-start: 65px;
-  margin-inline-start: -25px;
-  font-size: var(--font-size-h1);
-  align-self: center;
-}
-
-.title {
-  color: var(--color-focus);
-  text-shadow: 4px 4px var(--color-text-shadow);
-}
-
-.header__description-block {
-  justify-self: end;
-  align-self: center;
+  font-size: var(--title-size);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--shadow-color);
+  margin-block-start: 27.9%;
+  margin-inline-start: -1.8%;
+  font-weight: 700;
+  line-height: 82.5%;
 }
 
 .header__description {
+  inline-size: 50%;
   font-size: 18px;
   font-weight: 700;
-  background-color: var(--color-title-bg);
-  color: var(--color-text-black);
-  margin-block-end: 40px;
+  line-height: 1.3;
+  margin-block-start: 11.5%;
+  margin-block-end: 11.6%;
+  justify-self: end;
 }
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "Почему посредоточиться так сложно?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
+/*↓↓↓↓ Блок со стилями для  секции "Почему cосредоточиться так сложно?"↓↓↓↓*/
 .section__hard-to-concentrate {
   display: grid;
-  gap: var(--page-gap);
+  gap: 20px;
   grid-template-columns: fit-content(32%) fit-content(68%);
 }
 
@@ -198,21 +195,16 @@
 }
 
 .section__hard-to-concentrate-description-multitasking {
-  font-size: 18px;
-  font-weight: 400;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
 .section__hard-to-concentrate-description-dopamine {
   grid-row-start: 2;
-  font-size: 18px;
-  font-weight: 400;
   grid-row-end: 3;
 }
 
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "Что снижает концентрацию внимания?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
+/*↓↓↓↓ Блок со стилями для секции "Что снижает концентрацию внимания?" ↓↓↓↓*/
 .section__reduced-concentration {
   display: grid;
   grid-template-rows: repeat(2, min-content);
@@ -231,8 +223,6 @@
   gap: 20px;
 }
 .section__reduced-concentration-multitasking {
-  font-size: 18px;
-  font-weight: 400;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -240,8 +230,6 @@
 }
 
 .section__reduced-concentration-food {
-  font-size: 18px;
-  font-weight: 400;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -249,19 +237,16 @@
 }
 
 .section__reduced-concentration-gadgets {
-  font-size: 18px;
-  font-weight: 400;
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "Как концентрироваться лучше, чем золотая рыбка"↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
+/*↓↓↓↓ Блок со стилями для секции "Как концентрироваться лучше, чем золотая рыбка" ↓↓↓↓*/
 .section__gold-fish {
   display: grid;
-  gap: var(--page-gap);
+  gap: 20px;
   grid-template-columns: fit-content(32%) fit-content(68%);
   padding-block-start: 80px;
 }
@@ -278,44 +263,34 @@
 }
 
 .section__gold-fish-sky {
-  font-size: 18px;
-  font-weight: 400;
   grid-row-start: 2;
   grid-row-end: 3;
 }
 
 .section__gold-fish-music {
-  font-size: 18px;
-  font-weight: 400;
   grid-row-start: 3;
   grid-row-end: 4;
 }
 
 .section__gold-fish-walk {
-  font-size: 18px;
-  font-weight: 400;
   grid-row-start: 4;
   grid-row-end: 5;
 }
 
 .section__gold-fish-eat {
-  font-size: 18px;
-  font-weight: 400;
   grid-row-start: 5;
   grid-row-end: 6;
 }
 
 .section__gold-fish-read {
-  font-size: 18px;
-  font-weight: 400;
   grid-row-start: 6;
   grid-row-end: 7;
 }
 
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Секция "А можно в картинках?" ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
-.fourth__section {
+/*↓↓↓↓ Блок со стилями для секции "А можно в картинках?"↓↓↓↓*/
+.section__images {
   display: grid;
+  gap: 10px;
   padding-block-start: 80px;
 }
 
@@ -369,215 +344,157 @@
   grid-row-end: 4;
 }
 
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Подвал ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+/*↓↓↓↓ Блок со стилями для футера ↓↓↓↓*/
 
 .footer {
-  min-height: 768px;
-  display: grid;
+  padding: 0 20px 20px 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: var(--color-bg);
 }
 
 .footer__title {
-  font-size: var(--font-size-h1);
-  line-height: 129.53px;
+  font-size: var(--title-size);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--shadow-color);
+  margin-block: 34vh;
 }
 
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 1024  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
+/*↓↓↓↓ Блок со стилями для разрешений меньше 1024 ↓↓↓↓*/
 @media (width < 1024px) {
+
   .header__theme-menu-list {
-    display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 10px;
     align-items: end;
-    margin-top: 23.5%;
+    margin-block-start: 23%;
   }
 
   .header__title {
-    line-height: 99px;
-    font-size: 120px;
-  }
-
-  .footer__title {
-    line-height: 99px;
-    font-size: 120px;
+    margin-block-start: 8.23%;
+    margin-inline-start: -2.4%;
   }
 
   .header__description {
-    width: 364px;
-    font-size: 18px;
-    font-weight: 700;
+
   }
-
-  .section__hard-to-concentrate {
-    display: grid;
-    gap: var(--page-gap);
-    grid-template-columns: 236px auto;
-  }
-}
-
-/*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Для разрешений меньше 768  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
-
-@media (width < 768px) {
-  .header {
-    padding: 10px;
-  }
-
-  .header__theme-menu-title {
-    margin-block-start: 9.5vh;
-    margin-inline-start: -1%;
-  }
-
-  .header__theme-menu-list {
-    margin-block-start: 18%;
-    margin-inline-end: 6px;
-  }
-
-  /* .header__rec {
-    display: flex;
-    position: absolute;
-    top: 5px;
-    right: 28px;
-    text-transform: uppercase;
-    color: var(--color-title-bg);
-  } */
-
-  .decorated-zone::after {
-    right: 10px;
-    top: 10px;
-  }
-
-  .decorated-zone:before {
-    bottom: 10px;
-    left: 10px;
-  }
-
-  .header__theme-menu-text {
-    inline-size: 100%;
-    margin-block-start: 8vh;
-    margin-block-end: 8.5vh;
-  }
-
-  .header__theme-menu-rec {
-    top: 11px;
-    right: 40px;
-  }
-
-  .main {
-    gap: 50px;
-  }
-
-  .section__hard-to-concentrate {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-  }
-
-  .section__hard-to-concentrate-description {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-  }
-
-  .section__hard-to-concentrate-description-multitasking {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .section__hard-to-concentrate-description-dopamine {
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
-  .section__reduced-concentration {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: auto auto;
+  .section__hard-to-concentrate-description{
+    gap: 20px;
   }
 
   .section__reduced-concentration-description {
-    display: grid;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-  }
-
-  .section__reduced-concentration-multitasking {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .section__reduced-concentration-food {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .section__reduced-concentration-gadgets {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
-  .width-limit {
-    inline-size: auto;
-  }
-
-  .section__gold-fish {
-    padding-inline: 10px;
-    grid-template-columns: fit-content(100%);
-    grid-template-rows: fit-content(32%) fit-content(68%);
-  }
-
-  .fourth__section {
-    padding: 0 10px 40px;
-    gap: 10px;
-  }
-
-  .images {
-    grid-template-columns: fit-content(100%);
-    grid-template-rows: repeat(auto-fit, fit-content(100%));
-    gap: 10px;
-  }
-
-  .img__sunset {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .img__icecream {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .img__tape {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .img__books {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .img__street {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .footer {
-    padding: 10px;
+    grid-template-columns: repeat(1, fit-content(100%));
+    grid-auto-flow: row;
   }
 
   .footer__title {
-    margin-block: 36.5vh;
+    margin-block: 40.4vh;
   }
 }
+
+/*↓↓↓↓ Блок со стилями для разрешений меньше 768 ↓↓↓↓*/
+@media (width < 768px) {
+    .header {
+      padding: 10px;
+    }
+  
+    .header__title {
+      margin-block-start: 9.5vh;
+      margin-inline-start: -1%;
+    }
+  
+    .header__theme-menu-list {
+      margin-block-start: 18%;
+      margin-inline-end: 6px;
+    }
+  
+    .decorated-zone::after {
+      right: 10px;
+      top: 10px;
+    }
+    
+    .decorated-zone:before {
+      bottom: 10px;
+      left: 10px;
+    }
+  
+    .header__description {
+      inline-size: 100%;
+      margin-block-start: 8vh;
+      margin-block-end: 8.5vh;
+    }
+  
+    .header__rec {
+      top: 11px;
+      right: 40px;
+    }
+    
+    .main-page {
+      gap: 50px;
+    }
+  
+    .section__hard-to-concentrate {
+      padding: 40px 10px 0;
+      grid-template-rows: fit-content(32%) fit-content(68%);
+      grid-template-columns: fit-content(100%);
+    }
+  
+    .section__reduced-concentration {
+      padding-inline: 10px;
+    }
+  
+    .width-limit {
+      inline-size: auto;
+    }
+  
+    .section__gold-fish {
+      padding-inline: 10px;
+      grid-template-columns: fit-content(100%);
+      grid-template-rows: fit-content(32%) fit-content(68%);
+    }
+  
+    .section__images {
+      padding: 0 10px 40px;
+      gap: 10px;
+    }
+  
+    .images {
+      grid-template-columns: fit-content(100%);
+      grid-template-rows: repeat(auto-fit, fit-content(100%));
+      gap: 10px;
+    }
+  
+    .img__sunset {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    
+    .img__icecream {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    
+    .img__tape {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    
+    .img__books {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    
+    .img__street {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  
+    .footer {
+      padding: 10px;
+    }
+  
+    .footer__title {
+      margin-block: 36.5vh;
+    }
+  }
