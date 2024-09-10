@@ -63,8 +63,7 @@
 
 /*↓↓↓↓ Блок со стилями для хедера ↓↓↓↓*/
 .header {
-  position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   padding: 20px;
@@ -193,7 +192,7 @@
 .section__hard-to-concentrate-description {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  gap:20px;
+  gap: 20px;
 }
 
 .section__hard-to-concentrate-description-multitasking {
@@ -366,7 +365,6 @@
 
 /*↓↓↓↓ Блок со стилями для разрешений меньше 1024 ↓↓↓↓*/
 @media (width < 1024px) {
-
   .header__theme-menu-list {
     flex-direction: column;
     gap: 10px;
@@ -408,21 +406,21 @@
     grid-row-start: 1;
     grid-row-end: 2;
   }
-  
+
   .section__reduced-concentration-food {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
   }
-  
+
   .section__reduced-concentration-gadgets {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
   }
-  
+
   .section__gold-fish-description {
     margin-inline-start: 0.65%;
   }
@@ -435,7 +433,6 @@
 
 /*↓↓↓↓ Блок со стилями для разрешений меньше 768 ↓↓↓↓*/
 @media (width < 768px) {
-
   .header {
     padding: 10px;
     min-height: 100vh;
