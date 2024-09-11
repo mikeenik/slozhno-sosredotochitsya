@@ -501,12 +501,17 @@
     grid-template-rows: fit-content(32%) fit-content(68%);
   }
 
+  .section__gold-fish-walk {
+    letter-spacing: 1px;
+  }
+
   .section__images {
-    padding: 0 10px 40px;
+    padding-top: 51px; 
     gap: 10px;
   }
 
   .images {
+    padding-top: 0;
     grid-template-columns: fit-content(100%);
     grid-template-rows: repeat(auto-fit, fit-content(100%));
     gap: 10px;
