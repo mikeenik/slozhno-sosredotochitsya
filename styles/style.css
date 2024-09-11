@@ -441,8 +441,19 @@
 
   .header__theme-menu-list {
     margin-block-start: 17%;
-    margin-inline-end: 7px;
     gap: 7px;
+  }
+
+  .header__theme-menu-item {
+    margin-inline-end: 7px;
+  }
+
+  .main-text {
+    padding-right: 4px;
+  }
+
+  .title-decor {
+    inline-size: 99%;
   }
 
   .decorated-zone::after {
@@ -496,17 +507,13 @@
   }
 
   .section__gold-fish {
-    padding-block-start: 51px;
+    padding-block-start: 50px;
     grid-template-columns: fit-content(100%);
     grid-template-rows: fit-content(32%) fit-content(68%);
   }
 
-  .section__gold-fish-walk {
-    letter-spacing: 1px;
-  }
-
   .section__images {
-    padding-top: 51px; 
+    padding-top: 48px;
     gap: 10px;
   }
 
@@ -548,6 +555,9 @@
   }
 
   .footer__title {
-    margin-block: 36.5vh;
+    margin-block: 36vh;
+    font-size: 116px;
+    font-weight: 700;
+    line-height: 95.7px;
   }
 }
