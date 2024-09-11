@@ -1,15 +1,15 @@
 :root {
-  --shadow-color: #FF0070;
-  --border-color: #FF0070;
-  --accent-color: #FFC2E6;
-  --title-color: #DB00FF;
+  --shadow-color: #ff0070;
+  --border-color: #ff0070;
+  --accent-color: #ffc2e6;
+  --title-color: #db00ff;
   --decor-color: #000028;
-  --decor-bg-color: #FF0070;
-  --page-text-color: #F1B2CE;
+  --decor-bg-color: #ff0070;
+  --page-text-color: #f1b2ce;
   --page-bg-color: #000028;
-  --link-shadow:  #FF0070;
-  --hover-color: rgb(255, 0, 112, 0.40);
-  --text-font: 'IBM Plex Mono', monospace;
+  --link-shadow: #ff0070;
+  --hover-color: rgb(255, 0, 112, 0.4);
+  --text-font: "IBM Plex Mono", monospace;
   --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --page-bg-img: url(../images/cover-image-dark.png);
   --hidden-owerflow: visible;

@@ -5,14 +5,14 @@
 */
 
 .page.theme_light {
-  --shadow-color: #FF0070;
+  --shadow-color: #ff0070;
   --border-color: #353430;
   --accent-color: #ffc2e6;
   --title-color: #ffc2e6;
   --decor-color: #353430;
   --decor-bg-color: #ff8dcb;
   --page-text-color: #353430;
-  --page-bg-color: #FFF1F7;
+  --page-bg-color: #fff1f7;
   --link-shadow: #f1b2ce;
   --hover-color: rgb(50, 49, 45, 0.4);
   --text-font: "IBM Plex Mono", monospace;
@@ -24,14 +24,14 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --shadow-color: #FF0070;
+    --shadow-color: #ff0070;
     --border-color: #353430;
     --accent-color: #ffc2e6;
     --title-color: #ffc2e6;
     --decor-color: #353430;
     --decor-bg-color: #ff8dcb;
     --page-text-color: #353430;
-    --page-bg-color: #FFF1F7;
+    --page-bg-color: #fff1f7;
     --link-shadow: #f1b2ce;
     --hover-color: rgb(50, 49, 45, 0.4);
     --text-font: "IBM Plex Mono", monospace;
