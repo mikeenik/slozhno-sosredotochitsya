@@ -100,7 +100,7 @@
 /*↓↓↓↓ Блок со стилями для хедера ↓↓↓↓*/
 .header {
   height: 100vh;
-  min-height: 668px;
+  min-height: 768px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   padding: 20px;
@@ -124,7 +124,7 @@
   height: 25px;
   border-block-start: 1px solid var(--border-color);
   border-inline-end: 1px solid var(--border-color);
-
+  position: absolute;
   right: 20px;
   top: 23px;
 }
@@ -296,7 +296,6 @@
 }
 
 /*↓↓↓↓ Блок со стилями для футера ↓↓↓↓*/
-
 .footer {
   padding: 0 20px 20px 20px;
   display: flex;
@@ -318,9 +317,14 @@
 
 /*↓↓↓↓ Блок со стилями для разрешений меньше 1024 ↓↓↓↓*/
 @media (width < 1024px) {
+  .header {
+    height: 100vh;
+    min-height: 1024px;
+  }
+
   .header__theme-menu-list {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     align-items: end;
     margin-block-start: 23%;
   }
@@ -331,17 +335,14 @@
   }
 
   .header__description {
-    margin-block-start: -3.4%;
+    margin-block-end: 22.1%;
   }
 
+  .section__reduced-concentration-title {
+    inline-size: 25%;
+  }
   .section__hard-to-concentrate-description {
     margin-inline-start: 0.8%;
-  }
-
-  .section__reduced-concentration {
-    grid-template-columns: repeat(1, fit-content(100%));
-    gap: 20px;
-    grid-auto-flow: row;
   }
 
   .section__reduced-concentration-description {
@@ -350,34 +351,13 @@
     grid-template-columns: repeat(1, fit-content(100%));
   }
 
-  .section__reduced-concentration-multitasking {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  .section__reduced-concentration-food {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  .section__reduced-concentration-gadgets {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 4;
-  }
-
   .section__gold-fish-description {
     margin-inline-start: 0.65%;
   }
 
   .footer__title {
     margin-block: 30vh;
-    margin-block-start: 46%;
+    margin-block-start: 45%;
   }
 }
 
@@ -389,7 +369,6 @@
 
   .header__title {
     font-size: var(--title-size);
-    /* font-size: 116px; */
     margin-block-start: 4%;
     margin-inline-start: -0.5%;
   }
