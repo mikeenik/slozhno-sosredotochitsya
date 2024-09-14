@@ -6,17 +6,27 @@
   color: var(--border-color);
   font-family: var(--text-font);
   line-height: 23.4px;
-  background-color: var(--page-bg-color);
+  background-image: var(--page-bg-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 }
-
+/*↓↓↓↓ Блок со стилями для мэйна ↓↓↓↓*/
 .main {
   padding: 0 20px 0 20px;
+  background-color: var(--page-bg-color);
+  background-attachment: fixed;
 }
 
 .main-title {
   font-size: 18px;
   font-weight: 700;
+}
+
+.title-decor {
+  color: var(--decor-color);
+  background-color: var(--decor-bg-color);
 }
 
 .main-text {
@@ -26,13 +36,21 @@
   color: var(--page-text-color);
 }
 
+.card-title-gold {
+  color: var(--decor-color);
+  background-color: var(--decor-bg-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/*↓↓↓↓ Блок со стилями для ссылок ↓↓↓↓*/
 .text-link {
-  text-shadow: 2px 2px 0 #ff0070;
+  text-shadow: 2px 2px 0 var(--link-shadow);
   text-decoration: none;
 }
 
 .text-link:hover {
-  border-block-end: 1px solid #000028;
+  border-block-end: 1px solid var(--border-color);
 }
 
 .text-link:focus {
@@ -40,33 +58,52 @@
 }
 
 .text-link:focus-visible {
-  outline: 1px solid #f1b2ce;
+  outline: 1px solid var(--border-color);
 }
 
-.title-decor {
+/*↓↓↓↓ Блок со стилями для карточки ↓↓↓↓*/
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.card-title {
   color: var(--decor-color);
   background-color: var(--decor-bg-color);
   font-size: 18px;
   font-weight: 700;
 }
 
-.title-decor-h4 {
-  color: var(--decor-color);
-  background-color: var(--decor-bg-color);
+.card-text {
   font-size: 18px;
   font-weight: 400;
+  color: var(--page-text-color);
+}
+
+/*↓↓↓↓ Блок со стилями для секций ↓↓↓↓*/
+.section__horizontal {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: fit-content(32%) fit-content(68%);
+  padding-block-end: 80px;
+}
+
+.section__vertical {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 20px;
+  padding-block-end: 80px;
 }
 
 /*↓↓↓↓ Блок со стилями для хедера ↓↓↓↓*/
 .header {
   height: 100vh;
+  min-height: 668px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   padding: 20px;
-  background-image: var(--page-bg-img);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .decorated-zone:before {
@@ -138,7 +175,7 @@
 }
 
 .header__theme-menu-button_active {
-  border-bottom: 1px solid currentColor;
+  border: 1px solid currentColor;
 }
 
 .header__theme-menu-button:hover {
@@ -151,6 +188,10 @@
 
 .header__theme-menu-button:focus {
   outline: none;
+}
+
+.header__theme-menu-item:has(:focus-visible) {
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .header__title {
@@ -173,16 +214,6 @@
   justify-self: end;
 }
 /*↓↓↓↓ Блок со стилями для  секции "Почему cосредоточиться так сложно?"↓↓↓↓*/
-.section__hard-to-concentrate {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: fit-content(32%) fit-content(68%);
-}
-
-.section__hard-to-concentrate-title {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
 
 .section__hard-to-concentrate-description {
   display: grid;
@@ -190,104 +221,28 @@
   gap: 20px;
 }
 
-.section__hard-to-concentrate-description-multitasking {
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-.section__hard-to-concentrate-description-dopamine {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
 /*↓↓↓↓ Блок со стилями для секции "Что снижает концентрацию внимания?" ↓↓↓↓*/
-.section__reduced-concentration {
-  display: grid;
-  grid-template-rows: repeat(2, min-content);
-  padding-block-start: 80px;
-}
-
 .section__reduced-concentration-title {
-  grid-column-start: 1;
-  grid-column-end: 1;
+  inline-size: 35%;
 }
 
 .section__reduced-concentration-description {
   display: grid;
   grid-template-columns: repeat(3, fit-content(32%));
-  grid-template-rows: auto;
   gap: 20px;
-}
-.section__reduced-concentration-multitasking {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.section__reduced-concentration-food {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.section__reduced-concentration-gadgets {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
 }
 
 /*↓↓↓↓ Блок со стилями для секции "Как концентрироваться лучше, чем золотая рыбка" ↓↓↓↓*/
-.section__gold-fish {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: fit-content(32%) fit-content(68%);
-  padding-block-start: 80px;
-}
-
-.section__gold-fish-title {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-
 .section__gold-fish-description {
   display: grid;
   grid-template-rows: repeat(5, auto);
   gap: 20px;
 }
 
-.section__gold-fish-sky {
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.section__gold-fish-music {
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.section__gold-fish-walk {
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-
-.section__gold-fish-eat {
-  grid-row-start: 5;
-  grid-row-end: 6;
-}
-
-.section__gold-fish-read {
-  grid-row-start: 6;
-  grid-row-end: 7;
-}
-
 /*↓↓↓↓ Блок со стилями для секции "А можно в картинках?"↓↓↓↓*/
 .section__images {
   display: grid;
   gap: 10px;
-  padding-block-start: 80px;
 }
 
 .images {
@@ -345,10 +300,13 @@
 .footer {
   padding: 0 20px 20px 20px;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 668px;
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: var(--page-bg-color);
+  background-attachment: fixed;
 }
 
 .footer__title {
@@ -384,9 +342,6 @@
     grid-template-columns: repeat(1, fit-content(100%));
     gap: 20px;
     grid-auto-flow: row;
-  }
-  .section__reduced-concentration-title {
-    inline-size: 35%;
   }
 
   .section__reduced-concentration-description {
@@ -430,11 +385,11 @@
 @media (width < 768px) {
   .header {
     padding: 10px;
-    min-height: 100vh;
   }
 
   .header__title {
-    font-size: 116px;
+    font-size: var(--title-size);
+    /* font-size: 116px; */
     margin-block-start: 4%;
     margin-inline-start: -0.5%;
   }
@@ -551,12 +506,11 @@
 
   .footer {
     padding: 10px;
-    min-height: 100vh;
   }
 
   .footer__title {
     margin-block: 36vh;
-    font-size: 116px;
+    font-size: var(--title-size);
     font-weight: 700;
     line-height: 95.7px;
   }
