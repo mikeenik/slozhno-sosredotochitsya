@@ -124,7 +124,6 @@
   height: 25px;
   border-block-start: 1px solid var(--border-color);
   border-inline-end: 1px solid var(--border-color);
-  position: absolute;
   right: 20px;
   top: 23px;
 }
@@ -242,12 +241,11 @@
 /*↓↓↓↓ Блок со стилями для секции "А можно в картинках?"↓↓↓↓*/
 .section__images {
   display: grid;
-  gap: 10px;
+  gap: 20px;
 }
 
 .images {
   display: grid;
-  padding-top: 10px;
   gap: 20px;
   grid-template-columns: repeat(3, fit-content(33%));
   grid-template-rows: repeat(3, fit-content(33%));
@@ -364,30 +362,41 @@
 /*↓↓↓↓ Блок со стилями для разрешений меньше 768 ↓↓↓↓*/
 @media (width < 768px) {
   .header {
+    height: 100hv;
+    min-height: 668px;
     padding: 10px;
   }
 
   .header__title {
-    font-size: var(--title-size);
-    margin-block-start: 4%;
+    margin-block-start: 17%;
     margin-inline-start: -0.5%;
+  }
+
+  .header__description {
+    inline-size: 98.5%;
+    margin-block-start: 14%;
   }
 
   .header__theme-menu-list {
     margin-block-start: 17%;
+    margin-inline-end: 1%;
     gap: 7px;
-  }
-
-  .header__theme-menu-item {
-    margin-inline-end: 7px;
-  }
-
-  .main-text {
-    padding-right: 4px;
   }
 
   .title-decor {
     inline-size: 99%;
+  }
+
+  .card-title {
+    inline-size: 98.5%;
+  }
+
+  .card-title-gold {
+    inline-size: 98.5%;
+  }
+
+  .card-text {
+    inline-size: 98.5%;
   }
 
   .decorated-zone::after {
@@ -398,12 +407,6 @@
   .decorated-zone:before {
     bottom: 10px;
     left: 10px;
-  }
-
-  .header__description {
-    inline-size: 100%;
-    margin-block-start: 10%;
-    margin-block-end: 13%;
   }
 
   .header__rec {
@@ -423,36 +426,26 @@
     inline-size: 90%;
   }
 
-  .section__hard-to-concentrate {
-    grid-template-rows: fit-content(32%) fit-content(68%);
-    grid-template-columns: fit-content(100%);
-  }
-
-  .section__reduced-concentration {
-    padding-block-start: 51px;
-  }
-
   .section__reduced-concentration-title {
     inline-size: 80%;
   }
 
-  .width-limit {
-    inline-size: auto;
-  }
-
-  .section__gold-fish {
-    padding-block-start: 50px;
+  .section__horizontal {
     grid-template-columns: fit-content(100%);
     grid-template-rows: fit-content(32%) fit-content(68%);
+    padding-block-end: 50px;
+  }
+
+  .section__vertical {
+    padding-block-end: 50px;
   }
 
   .section__images {
-    padding-top: 48px;
     gap: 10px;
   }
 
   .images {
-    padding-top: 0;
+    inline-size: 98.5%;
     grid-template-columns: fit-content(100%);
     grid-template-rows: repeat(auto-fit, fit-content(100%));
     gap: 10px;
@@ -488,9 +481,11 @@
   }
 
   .footer__title {
-    margin-block: 36vh;
+    height: 100hv;
+    min-height: 668px;
     font-size: var(--title-size);
     font-weight: 700;
     line-height: 95.7px;
+    margin-block-end: -115%;
   }
 }
