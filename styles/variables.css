@@ -10,7 +10,7 @@
   --link-shadow: #ff0070;
   --hover-color: rgb(255, 0, 112, 0.4);
   --text-font: "IBM Plex Mono", monospace;
-  --title-size: clamp(7.5rem, 0.5rem + 14vw, 9rem);
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --page-bg-img: url(../images/cover-image-dark.png);
   --hidden-owerflow: visible;
   --hidden-const: auto;

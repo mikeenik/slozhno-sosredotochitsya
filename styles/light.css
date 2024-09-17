@@ -15,7 +15,6 @@
   --page-bg-color: #fff1f7;
   --link-shadow: #f1b2ce;
   --hover-color: rgb(50, 49, 45, 0.4);
-  --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --page-bg-img: url(../images/cover-image-light.png);
   --hidden-owerflow: hidden;
   --hidden-const: 0;
@@ -33,7 +32,6 @@
     --page-bg-color: #fff1f7;
     --link-shadow: #f1b2ce;
     --hover-color: rgb(50, 49, 45, 0.4);
-    --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     --page-bg-img: url(../images/cover-image-light.png);
     --hidden-owerflow: hidden;
     --hidden-const: 0;

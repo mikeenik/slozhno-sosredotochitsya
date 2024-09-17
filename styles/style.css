@@ -169,8 +169,8 @@
   border: none;
   text-transform: lowercase;
   cursor: pointer;
-  padding-inline: 11.5px;
-  padding-block: 3px;
+  padding-inline: 13px;
+  padding-block: 0px;
 }
 
 .header__theme-menu-button_active {
@@ -194,7 +194,8 @@
 }
 
 .header__title {
-  font-size: var(--title-size);
+  /* font-size: var(--title-size); */
+  font-size: 157px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--shadow-color);
   margin-block-start: 6.1%;
@@ -328,6 +329,7 @@
   }
 
   .header__title {
+    font-size: var(--title-size);
     margin-block-start: 16%;
     margin-inline-start: -2.4%;
   }
@@ -362,12 +364,15 @@
 /*↓↓↓↓ Блок со стилями для разрешений меньше 768 ↓↓↓↓*/
 @media (width < 768px) {
   .header {
-    height: 100hv;
+    height: 100vh;
     min-height: 668px;
+    width: 100vw;
+    min-width: 375px;
     padding: 10px;
   }
 
   .header__title {
+    font-size: var(--title-size);
     margin-block-start: 17%;
     margin-inline-start: -0.5%;
   }
@@ -378,13 +383,12 @@
   }
 
   .header__theme-menu-list {
-    margin-block-start: 17%;
-    margin-inline-end: 1%;
-    gap: 7px;
+    margin-block-start: 18%;
+    gap: 12px;
   }
 
   .title-decor {
-    inline-size: 99%;
+    inline-size: 100%;
   }
 
   .card-title {
@@ -407,11 +411,6 @@
   .decorated-zone:before {
     bottom: 10px;
     left: 10px;
-  }
-
-  .header__rec {
-    top: 11px;
-    right: 40px;
   }
 
   .page {
