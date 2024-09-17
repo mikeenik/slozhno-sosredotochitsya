@@ -373,12 +373,12 @@
 
   .header__title {
     font-size: var(--title-size);
-    margin-block-start: 17%;
-    margin-inline-start: -0.5%;
+    margin-block-start: 19.5%;
+    margin-inline-start: 0.5%;
   }
 
   .header__description {
-    margin-block-start: 14%;
+    margin-block-start: 16%;
     margin-inline-start: -2%;
   }
 
@@ -392,15 +392,15 @@
   }
 
   .card-title {
-    inline-size: 98.5%;
+    inline-size: 100%;
   }
 
   .card-title-gold {
-    inline-size: 98.5%;
+    inline-size: 100%;
   }
 
   .card-text {
-    inline-size: 98.5%;
+    inline-size: 100%;
   }
 
   .decorated-zone::after {
@@ -444,7 +444,7 @@
   }
 
   .images {
-    inline-size: 98.5%;
+    inline-size: 100%;
     grid-template-columns: fit-content(100%);
     grid-template-rows: repeat(auto-fit, fit-content(100%));
     gap: 10px;
@@ -485,6 +485,6 @@
     font-size: var(--title-size);
     font-weight: 700;
     line-height: 95.7px;
-    margin-block-end: -115%;
+    padding-block-start: 81%;
   }
 }

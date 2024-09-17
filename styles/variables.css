@@ -1,14 +1,13 @@
 :root {
   --shadow-color: #ff0070;
   --border-color: #ff0070;
-  --accent-color: #ffc2e6;
   --title-color: #db00ff;
   --decor-color: #000028;
   --decor-bg-color: #ff0070;
   --page-text-color: #f1b2ce;
   --page-bg-color: #000028;
   --link-shadow: #ff0070;
-  --hover-color: rgb(255, 0, 112, 0.4);
+  --hover-color: #ff007066;
   --text-font: "IBM Plex Mono", monospace;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --page-bg-img: url(../images/cover-image-dark.png);
