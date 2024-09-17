@@ -374,6 +374,7 @@
 
   .header__description {
     margin-block-start: 14%;
+    margin-inline-start: -2%;
   }
 
   .header__theme-menu-list {
@@ -381,7 +382,7 @@
     margin-inline-end: 1%;
     gap: 7px;
   }
-/* 
+
   .title-decor {
     inline-size: 99%;
   }
@@ -396,7 +397,7 @@
 
   .card-text {
     inline-size: 98.5%;
-  } */
+  }
 
   .decorated-zone::after {
     right: 10px;
