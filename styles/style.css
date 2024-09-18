@@ -342,10 +342,6 @@
     grid-template-columns: repeat(1, fit-content(100%));
   }
 
-  .section__description {
-    margin-inline-start: 0.65%;
-  }
-
   .footer__title {
     margin-block: 30vh;
     margin-block-start: 45%;
