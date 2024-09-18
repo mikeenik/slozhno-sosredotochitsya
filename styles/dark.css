@@ -13,7 +13,8 @@
   --page-text-color: #f1b2ce;
   --page-bg-color: #000028;
   --link-shadow: #ff0070;
-  --hover-color: rgb(255, 0, 112, 0.4);
+  --hover-color: rgba(255, 0, 112, 0.4);
+  --hover-link:#F1B2CE;
   --page-bg-img: url(../images/cover-image-dark.png);
   --hidden-owerflow: visible;
   --hidden-const: auto;

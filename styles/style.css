@@ -3,20 +3,19 @@
   display: grid;
   grid-template-rows: 1fr auto 1fr;
   gap: 60px;
+  justify-content: center;
   color: var(--border-color);
   font-family: var(--text-font);
   line-height: 23.4px;
-  background-image: var(--page-bg-img);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: var(--page-bg-color);
 }
 /*↓↓↓↓ Блок со стилями для мэйна ↓↓↓↓*/
 .main {
   padding: 0 20px 0 20px;
-  background-color: var(--page-bg-color);
-  background-attachment: fixed;
 }
 
 .main-title {
@@ -50,7 +49,7 @@
 }
 
 .text-link:hover {
-  border-block-end: 1px solid var(--border-color);
+  border-block-end: 1px solid var(--hover-link);
 }
 
 .text-link:focus {
@@ -83,16 +82,18 @@
 }
 
 /*↓↓↓↓ Блок со стилями для секций ↓↓↓↓*/
-.section__horizontal {
+.section__concentration {
   display: grid;
   gap: 20px;
   grid-template-columns: fit-content(32%) fit-content(68%);
+  justify-content: center;
   padding-block-end: 80px;
 }
 
-.section__vertical {
+.section__focusing {
   display: grid;
   grid-template-rows: repeat(2, min-content);
+  justify-content: center;
   gap: 20px;
   padding-block-end: 80px;
 }
@@ -104,6 +105,8 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   padding: 20px;
+  background-image: var(--page-bg-img);
+  background-size: cover;
 }
 
 .decorated-zone:before {
@@ -125,14 +128,14 @@
   border-block-start: 1px solid var(--border-color);
   border-inline-end: 1px solid var(--border-color);
   right: 20px;
-  top: 23px;
+  top: 20px;
 }
 
 .header__rec {
   display: flex;
   position: absolute;
-  top: 25px;
-  right: 50px;
+  top: 20px;
+  right: 48px;
   text-transform: uppercase;
   inline-size: var(--hidden-const);
   block-size: var(--hidden-const);
@@ -144,7 +147,7 @@
   width: 9px;
   height: 9px;
   position: absolute;
-  top: 5px;
+  top: 7px;
   right: -19px;
   border-radius: 50%;
   background-color: var(--border-color);
@@ -158,7 +161,7 @@
 
 .header__theme-menu-list {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   list-style: none;
@@ -194,7 +197,6 @@
 }
 
 .header__title {
-  /* font-size: var(--title-size); */
   font-size: 157px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--shadow-color);
@@ -215,9 +217,8 @@
 }
 /*↓↓↓↓ Блок со стилями для  секции "Почему cосредоточиться так сложно?"↓↓↓↓*/
 
-.section__hard-to-concentrate-description {
+.section__description {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -229,13 +230,6 @@
 .section__reduced-concentration-description {
   display: grid;
   grid-template-columns: repeat(3, fit-content(32%));
-  gap: 20px;
-}
-
-/*↓↓↓↓ Блок со стилями для секции "Как концентрироваться лучше, чем золотая рыбка" ↓↓↓↓*/
-.section__gold-fish-description {
-  display: grid;
-  grid-template-rows: repeat(5, auto);
   gap: 20px;
 }
 
@@ -303,12 +297,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: var(--page-bg-color);
-  background-attachment: fixed;
 }
 
 .footer__title {
-  font-size: var(--title-size);
+  font-size: 157px;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--shadow-color);
   margin-block-start: 3vh;
@@ -317,15 +309,14 @@
 /*↓↓↓↓ Блок со стилями для разрешений меньше 1024 ↓↓↓↓*/
 @media (width < 1024px) {
   .header {
-    height: 100vh;
     min-height: 1024px;
   }
 
   .header__theme-menu-list {
     flex-direction: column;
-    gap: 8px;
+    gap: 11px;
     align-items: end;
-    margin-block-start: 23%;
+    margin-block-start: 24%;
   }
 
   .header__title {
@@ -341,7 +332,7 @@
   .section__reduced-concentration-title {
     inline-size: 25%;
   }
-  .section__hard-to-concentrate-description {
+  .section__description {
     margin-inline-start: 0.8%;
   }
 
@@ -351,7 +342,7 @@
     grid-template-columns: repeat(1, fit-content(100%));
   }
 
-  .section__gold-fish-description {
+  .section__description {
     margin-inline-start: 0.65%;
   }
 
@@ -364,7 +355,6 @@
 /*↓↓↓↓ Блок со стилями для разрешений меньше 768 ↓↓↓↓*/
 @media (width < 768px) {
   .header {
-    height: 100vh;
     min-height: 668px;
     width: 100vw;
     min-width: 375px;
@@ -383,8 +373,13 @@
   }
 
   .header__theme-menu-list {
-    margin-block-start: 18%;
+    margin-block-start: 18.5%;
     gap: 12px;
+  }
+
+  .header__rec {
+    top: 10px;
+    right: 38px;
   }
 
   .title-decor {
@@ -429,13 +424,13 @@
     inline-size: 80%;
   }
 
-  .section__horizontal {
+  .section__concentration {
     grid-template-columns: fit-content(100%);
     grid-template-rows: fit-content(32%) fit-content(68%);
     padding-block-end: 50px;
   }
 
-  .section__vertical {
+  .section__focusing {
     padding-block-end: 50px;
   }
 
@@ -477,14 +472,14 @@
 
   .footer {
     padding: 10px;
+    height: 100hv;
+    min-height: 668px;
   }
 
   .footer__title {
-    height: 100hv;
-    min-height: 668px;
     font-size: var(--title-size);
     font-weight: 700;
     line-height: 95.7px;
-    padding-block-start: 81%;
+    padding-block-start: 13%;
   }
 }
