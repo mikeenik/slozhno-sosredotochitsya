@@ -14,7 +14,7 @@
   --page-bg-color: #fff1f7;
   --link-shadow: #ff8dcb;
   --hover-color: #32312d66;
-  --hover-link:#353430;
+  --hover-link: #353430;
   --page-bg-img: url(../images/cover-image-light.png);
   --hidden-owerflow: hidden;
   --hidden-const: 0;
@@ -31,8 +31,7 @@
     --page-bg-color: #fff1f7;
     --link-shadow: #ff8dcb;
     --hover-color: #32312d66;
-    --hover-link:#353430;
-    ;
+    --hover-link: #353430;
     --page-bg-img: url(../images/cover-image-light.png);
     --hidden-owerflow: hidden;
     --hidden-const: 0;
