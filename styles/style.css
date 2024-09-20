@@ -7,6 +7,7 @@
   color: var(--border-color);
   font-family: var(--text-font);
   line-height: 23.4px;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--page-bg-color);
